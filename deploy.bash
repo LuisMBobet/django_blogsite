@@ -41,4 +41,7 @@ sudo ln -s /etc/nginx/sites-available/myBlog /etc/nginx/sites-enabled
 mkdir ve_py3/logs ve_py3/run
 
 sudo systemctl enable supervisor
-sudo systemctl start supervisor
+sudo systemctl restart supervisor
+
+sudo rm /etc/nginx/sites-available/default
+sudo systemctl restart nginx
