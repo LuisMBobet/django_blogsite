@@ -5,6 +5,9 @@ To deploy this, simply ensure this repo is available at your home directory and 
 deploy.bash
 ```
 
+The site is served at localhost. If you want to create any posts you will need to create a superuser via manage.py and then login via the admin page.
+
+
 Note that if you want to properly deploy this you need to change the following for security and other reasons:
 - SECRET_KEY
 - ALLOWED_HOSTS
