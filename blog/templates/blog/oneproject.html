@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block meta %}
+  <meta name ="description" content = "{{project.project_name}}">
+  <meta name ="author" content = "Luis Millares-Bobet">
+  <title>Blog</title>
+{% endblock %}
+
+{% block content %}
+  <div class ="outer" style = "border-left-color:{{project.project_colour}};">
+    <div class = "centralBlockHeader"><span class = "centralProjectTitle">{{project.project_name}}</span>
+      <p class ="centralBlockProjects">
+        {% for tag in project.project_tags.all %}
+          <span class= "centralBlockTag" style = "background-color:{{tag.tag_colour}};">{{tag.tag_name}}</span>
+        {% endfor %}
+      </p>
+    </div>
+  </div>
+  <div class ="centralBlockText"><p>{{project.project_summary|safe}}</p>  </div>
+  {% for post in project.projectPost.all %}
+    <div class="outer" style = "border-left-color:{{post.post_project.project_colour}};"><div class ="centralBlockHeader"><a class = "centralPostTitle" href="/{{post.post_slug}}">{{ post.post_title }}</a><p class="postDate">{{post.post_date}}</p></div></div>
+  {% endfor %}
+{% endblock %}

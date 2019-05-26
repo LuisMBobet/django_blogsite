@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% block meta %}
+  {% endblock %}
+  <link href="{% static 'dist/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{% static 'style/1.css' %}" rel="stylesheet">
+  <link rel="icon" href = "{% static 'style/images/favicon.ico' %}">
+</head>
+
+<body>
+  <div style="background:#161616 !important; color :white; margin-bottom:0px;" class="jumbotron text-center">
+    <h1>Luis Millares-Bobet</h1>
+    <h4><a href = "/" class="linkBox linkBoxLeft linkBoxLink">Blog</a><a href = "/projects" class="linkBox linkBoxLeft linkBoxLink">Projects</a><a href = "/info" class="linkBox linkBoxLeft linkBoxLink">Info</a><a href = "/contact" class="linkBox linkBoxLink">Contact</a></h4>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2 col-lg-3 test1">
+      </div>
+      <div class="col-sm-8 col-lg-6">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <div class="col-sm-2 col-lg-3 test1">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="{% static 'dist/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

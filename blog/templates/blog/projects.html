@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block meta %}
+  <meta name ="description" content = "List of projects">
+  <meta name ="author" content = "Luis Millares-Bobet">
+  <title>Blog</title>
+{% endblock %}
+
+{% block content %}
+  <div class="outer"><div class ="centralBlockHeader">Projects</div></div>
+  <div class ="centralBlockText"><p>Below you will see the projects that I have worked on or am currently working on. Please note that these are not all the work I've done, some projects have yet to be added.</p>
+  </div>
+  {% for project in all_projects %}
+    <div class = "outer" style = "border-left-color:{{project.project_colour}};" >
+      <div class = "centralBlockHeader"><a class = "centralProjectTitle" href = "{{project.project_slug}}">{{project.project_name}}</a>
+        <p class ="centralBlockProjects">
+          {% for tag in project.project_tags.all %}
+            <span class= "centralBlockTag" style = "background-color:{{tag.tag_colour}};">{{tag.tag_name}}</span>
+          {% endfor %}
+        </p>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}

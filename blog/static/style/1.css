@@ -1,0 +1,263 @@
+body{
+	background-color: #eee;
+	color:black;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 768px){
+	.test1{
+		visibility:visible;
+	}
+}
+
+@media (max-width: 767px){
+	.test1{
+		display:none;
+	}
+}
+
+
+
+.coltext{
+	text-align: center;
+}
+.b1 {
+-moz-border-radius :40px;
+-webkit-border-radius:40px;
+border-radius :40px;
+}
+.mainText{
+	text-align:center;
+	font-size:18px;
+
+}
+
+.outer{
+	border:0px;
+	border-left:10px solid #316cce;
+}
+
+.centralBlockHeader{
+	color:white;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	position:relative;
+	height:100%;
+	text-align:left;
+	font-size:32px;
+	font-weight:bold;
+	padding:0px 10px 0px 10px;
+	margin-bottom:0px;
+	margin-top:5px;
+	background:#161616;
+	border : 1px solid black;
+	border-left-width: 0px;
+	border-bottom-width :0px;
+	border-radius: 0px 10px 10px 0px;
+}
+
+
+.dateHolder{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: right;
+	font-size:14px;
+	padding-right : 15px;
+}
+
+.postDate{
+	font-size: 11px;
+	font-weight: bold;
+  color:#B1B1B1 ;
+  padding-top: 0px;
+  margin-bottom: 0px ;
+	margin-top: 0px;
+	padding-right: 0px;
+	margin-right: 0px;
+	margin-left: 5px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+
+}
+.postTitle{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-weight: bold;
+	color :white;
+}
+
+a.centralPostTitle:link,a.centralPostTitle:visited{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align:left;
+	font-size:32px;
+	font-weight:bold;
+	color:white;
+}
+
+.centralBlockText{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	height:100%;
+	text-align:left;
+	font-size:14px;
+	margin: 0px 20px 10px 20px;
+	padding: 10px 20px 10px 20px;
+	background:white;
+	border : 2px solid black;
+	border-top-width: 0px;
+	border-radius: 0px 0px 3px 3px;
+}
+
+.centralBlockProjects{
+	font-size: 11px;
+	font-weight: bold;
+  padding-top: 0px;
+  margin-bottom: 2px ;
+	margin-top: 0px;
+	padding-right: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.centralBlockTag{
+	font-size: 11px;
+	font-weight: bold;
+	color:white ;
+	padding : 2px 2px 2px 2px;
+	margin: 0px 3px 0px 0px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	border: 1px dashed #161616;
+}
+
+a.centralBlockTag:link, a.centralBlockTag:visited{
+	text-decoration: none;
+	color:inherit;
+}
+a.centralBlockTag:hover{
+	color:black;
+	text-decoration: underline;
+}
+
+.centralBlockProjectsHeader{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	position:relative;
+	height:100%;
+	text-align:left;
+	font-size:32px;
+	font-weight:bold;
+	padding:0px 10px 0px 20px;
+	margin-bottom:0px;
+	margin-top:5px;
+	background: #161616;
+	border-radius: 0px 5px 5px 0px;
+}
+
+.centralBlockProjectsStatus{
+	float: right;
+	color : white;
+	font-size : 18px;
+	margin : 7px 1px 0px 0px;
+	padding : 2px 5px 2px 5px;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.centralProjectTitle{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align:left;
+	font-size:32px;
+	font-weight:bold;
+	color:white;
+}
+
+a.centralProjectTitle:link,a.centralProjectTitle:visited{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align:left;
+	font-size:32px;
+	font-weight:bold;
+	color:white;
+}
+
+
+.centralPagination{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	height:100%;
+	width: 100%;
+	text-align:center;
+	font-size:14px;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 20px 10px 20px;
+	background:white;
+	border : 2px solid black;
+	border-radius: 3px;
+}
+.centerBlock {
+  display: table;
+  margin: auto;
+}
+
+.container{
+	text-align:center;
+	font-size:18px;
+	margin:0px 0px 0px 0px;
+}
+
+.linkBox{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	height:100%;
+	width: 100%;
+	text-align:center;
+	font-size:16px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 10px 0px 10px;
+	border : 0px solid white;
+	border-width: 0px 0px 0px 0px
+}
+
+.linkBoxBlog{
+	border-radius: 3px 0px 0px 3px;
+	border-top-color: blue;
+	border-top-width: 10px;
+	border-right-width: 0px;
+}
+
+.linkBoxProjects{
+	border-radius: 0px 0px 0px 0px;
+	border-top-color: red;
+	border-top-width: 10px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+}
+
+.linkBoxInfo{
+	border-radius: 0px 3px 3px 0px;
+	border-top-color: green;
+	border-top-width: 10px;
+	border-left-width: 0px;
+}
+a.linkBoxLink:link, a.linkBoxLink:visited{
+	color:white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.linkBoxLeft{
+	border-right: 2px solid white;
+}
+
+.indexJumbotron{
+	margin-bottom: 0px;
+}
+
+.noPadding{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.centerAlignImage{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+h4.postHeader{
+	line-height: 1;
+	text-decoration:underline;
+	font-weight: 500;
+}

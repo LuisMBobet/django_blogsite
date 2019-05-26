@@ -1,0 +1,5 @@
+# Packages for python 3 virtual environment
+Django==1.11.5
+gunicorn==19.7.1
+mysqlclient==1.3.12
+Pillow==4.2.1

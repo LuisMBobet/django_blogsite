@@ -1,0 +1,52 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block meta %}
+<meta name="google-site-verification" content="0lGBkwRfn7QwPPrtaAS7pl2g3QCwVI2f6qKWxR_X-d0" />
+<meta name="google-site-verification" content="de3xCIwPlOmrNvOOEIceNz_1N2-YvMhY_-n63hO6gCg" />
+  <meta name ="description" content = "The personal website for Luis Millares-Bobet. Below you will see the most recent posts.">
+  <meta name ="author" content = "Luis Millares-Bobet">
+  <title>Blog</title>
+{% endblock %}
+
+{% block content %}
+ {% if latest_post_list %}
+  {% for aPost in latest_post_list %}
+    <div class="outer" style = "border-left-color:{{aPost.post_project.project_colour}};">
+      <div class ="centralBlockHeader">
+        <a class = "centralPostTitle" href="{{ aPost.post_slug}}">
+          {{ aPost.post_title }}
+        </a>
+        <p class = "centralBlockProjects">
+          <a class = "centralBlockTag" href = "/projects/{{aPost.post_project.project_slug}}" style = "background-color:{{aPost.post_project.project_colour}}">{{aPost.post_project.project_name}}</a>
+          <span class="postDate">{{aPost.post_date}}</span>
+        </p>
+      </div>
+    </div>
+    <div class ="centralBlockText">{{aPost.post_content|truncatechars_html:1000|safe}}<br> <a href="{{aPost.post_slug}}"> Read</a></div>
+  {% endfor %}
+ {% endif %}
+ <div class = "row">
+ <div class="col-sm-4 col-lg-4 col-sm-offset-4 col-lg-offset-4 ">
+   <div class="centerBlock">
+ {% if is_paginated %}
+     <div class="pagination">
+         <span class="page-links">
+             <div class="centralPagination">
+               {% if page_obj.has_previous %}
+                   <a href="?page={{ page_obj.previous_page_number }}">Newer posts</a><br>
+               {% endif %}
+               <span class="page-current">
+                   Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.<br>
+               </span>
+               {% if page_obj.has_next %}
+                   <a href="?page={{ page_obj.next_page_number }}">Older posts</a>
+               {% endif %}
+             </div>
+         </span>
+     </div>
+ {% endif %}
+</div>
+</div>
+</div>
+{% endblock %}

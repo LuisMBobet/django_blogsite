@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+NAME="myBlog"
+DIR=/home/$USER/django_blogsite/ve_py3
+GROUP=$USER
+WORKERS=3
+BIND=unix:/home/$USER/django_blogsite/ve_py3/run/gunicorn.sock
+DJANGO_SETTTINGS_MODULE=myBlog.settings
+DJANGO_WSGI_MODULE=myBlog.wsgi
+LOG_LEVEL=error
+
+cd /home/$USER/django_blogsite/ve_py3
+source bin/activate
+
+export DJANGO_SETTINGS_MODULE=myBlog.settings
+export PYTHONPATH=/home/$USER/django_blogsite:$PYTHONPATH
+
+exec bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
+	--name $NAME \
+	--workers $WORKERS \
+	--user=$USER \
+	--group=$GROUP \
+	--bind=$BIND \
+	--log-level=$LOG_LEVEL \
+	--log-file=-
